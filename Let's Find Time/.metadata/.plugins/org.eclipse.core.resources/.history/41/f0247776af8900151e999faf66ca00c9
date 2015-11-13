@@ -120,14 +120,14 @@
         console.log(message)
 //        console.log(textContent)
 //        console.log(pre)
-        var pw = document.getElementById('nametmp')
+        var pw = document.getElementById('j_idt25:nametmp')
 //        console.log(pw)
         pw.value = message
       }
       
       function showMessage(){
     	   
-    	   var pw = document.getElementById('nametmp')
+    	   var pw = document.getElementById('j_idt25:nametmp')
     	   console.log(pw.value)
     	   alert(pw.value);
     	}

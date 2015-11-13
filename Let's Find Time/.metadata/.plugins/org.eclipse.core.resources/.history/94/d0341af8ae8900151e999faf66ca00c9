@@ -12,7 +12,7 @@
    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
       <h2>h:outputScript example</h2>
       <hr />
-      <h:form prependId="false">
+      <h:form>
             <h:panelGrid columns="2">
                 <h:outputText value="Name"></h:outputText>
                 <h:inputText id="nametmp" value="#{loginBean.name}"></h:inputText>

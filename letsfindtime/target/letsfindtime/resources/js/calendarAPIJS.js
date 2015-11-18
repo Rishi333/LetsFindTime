@@ -82,11 +82,11 @@
               var event = events[i];
               var startTime = event.start.dateTime;
               if (!startTime) {
-                startTime = 'ALL-DAY-START~'+event.start.date
+                startTime = event.start.date+'T00:00:00-08:00'
               }
               var endTime = event.end.dateTime;
               if (!endTime) {
-              	endTime = 'ALL-DAY-END~'+event.end.date
+              	endTime = event.end.date+'T23:59:59-08:00'
               }
               // appendPre(event.summary + ' (' + startTime + ')')
               text += startTime +'|'+endTime + "$"

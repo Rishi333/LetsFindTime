@@ -5,6 +5,14 @@
 import java.util.Date;
 import java.util.List;
 
+/*
+   How to use
+    1. Pass in each persons event string to EventParser
+    2. Build those Event(s) from the EventParser into a list
+    3. Pass in the constraints for the window of the search to EventParser
+    4. Create a new LetsFindTimeAlg and pass in the list from step 2 and the constraints from step 3
+    5. Call .getFreeTime() which returns an array of Dates. First is the start, second is the end.
+ */
 public class LetsFindTimeAlg {
     List<Event> constraints;
     List<List<Event>>  people;

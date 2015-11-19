@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+  <head>
+    <meta charset="utf-8"/>
+    <!-- Microsoft Edge supports -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Let's Find Time | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+
+  <body class="login-page">
+    <div class="login-box">
+      <div class="login-logo">
+      	<h:link class="login-logo" outcome="index"><b>L</b>et's <b>F</b>ind <b>T</b>ime</h:link>
+      </div> <!-- login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg"> Fill the form to create your Calendar </p>
+        <h:form class="loginForm">
+        
+          <!-- First name -->
+		  <div class="form-group has-feedback">
+		  	<h:inputText class="form-control" id="firstName" value="#{registration.fname}" required="true"/><br/> <!-- needToFix : a:placeholder="E-Mail & validation" -->
+		  	<span class="glyphicon glyphicon-user form-control-feedback"/>
+          </div> <!-- /.First name -->
+          
+          <!-- Last name -->
+		  <div class="form-group has-feedback">
+		  	<h:inputText class="form-control" id="lastName" value="#{registration.lname}" required="true"/><br/> <!-- needToFix : a:placeholder="E-Mail & validation" -->
+		  	<span class="glyphicon glyphicon-user form-control-feedback"/>
+          </div> <!-- /.First name -->
+          
+          <!-- E-mail -->
+		  <div class="form-group has-feedback">
+		  	<h:inputText class="form-control" id="email" value="#{registration.email}" required="true"/><br/> <!-- needToFix : a:placeholder="E-Mail & validation" -->
+		  	<span class="glyphicon glyphicon-envelope form-control-feedback"/>
+          </div> <!-- /.First name -->
+          
+          <!-- Input Password -->
+          <div class="form-group has-feedback">
+            <h:inputSecret class="form-control" id="password" value="#{registration.password}" required="true"/><br/> <!-- needToFix : a:placeholder="Password" --> 
+            <span class="glyphicon glyphicon-lock form-control-feedback"/>
+          </div> <!-- /.Input Password -->
+          
+          <!-- Re-type Password -->
+          <div class="form-group has-feedback">
+            <h:inputSecret class="form-control" id="repassword" value="#{registration.rePassword}" required="true"/><br/> <!-- needToFix : a:placeholder="Password" --> 
+            <span class="glyphicon glyphicon-lock form-control-feedback"/>
+          </div> <!-- /.Re-type Password -->
+          
+          <!-- Sign-up Button -->
+          <div class="row">
+            <div class="col-xs-8">
+            	#{registration.message}
+            </div>
+            <div class="col-xs-4">
+              <h:commandButton class="btn btn-primary btn-block btn-flat" id="Login" value="Submit" action="#{registration.userSignUp}"/><br/>
+            </div>
+          </div> <!-- /.Login Button -->
+          
+        </h:form> <!-- /.loginForm -->
+      </div> <!-- /.login-box-body -->
+    </div> <!-- /.login-box -->
+  </body>
+</html>

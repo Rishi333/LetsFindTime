@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14473768429040" configfile="/Let's Find Time/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="48" y="144" id="pf14473770357141" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14484209683697" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome.xhtml" x="192" y="144" id="pf14484209683698" outlinks="pf14484210470939" inlinks="pf14484209683697" path="/welcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome2.xhtml" x="336" y="156" id="pf144842104709310" inlinks="pf14484210470939" path="/welcome2.xhtml"/>
+  <links id="pf14484209683697" target="pf14484209683698" source="pf14473770357141" outcome="login"/>
+  <links id="pf14484210470939" target="pf144842104709310" source="pf14484209683698" outcome="login"/>
+</pageflow:Pageflow>

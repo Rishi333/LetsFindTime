@@ -7,7 +7,7 @@
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core">
 	
-	<head>
+	<h:head>
     	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<title>Let's Find Time | Dashboard</title>
 		<!-- Tell the browser to be responsive to screen width -->
@@ -19,7 +19,8 @@
 		<!-- Theme style -->
 		<link rel="stylesheet" href="index.css"/>
 		<link rel="stylesheet" href="skins.css"/>
-	</head>
+		<h:outputScript name="js/calendarAPIJS.js"  /> 
+	</h:head>
 
 	<body class="hold-transition skin-blue sidebar-mini">
 		<div class="wrapper">
@@ -64,6 +65,21 @@
 			</aside>
 			<!-- Content Wrapper. Contains page content -->
 			<div class="content-wrapper">
+
+<h:form prependId="false">
+<h:panelGrid columns="2">
+<h:inputHidden id="nametmp" value="#{login.event}"/>
+<div id="authorize-div">
+<span>Authorize access to Google Calendar API</span>
+	<h:inputHidden id="email" value="#{login.email}" />
+    <h:inputHidden id="password" value="#{login.password}" />
+    <h:commandButton id="authorize-button" onclick="handleAuthClick(event)" value="Submit" action="#{login.eventSubmit}" />
+</div>
+<pre id="output"></pre>
+</h:panelGrid>
+<br/>#{login.event}
+<br/>#{login.message}
+</h:form>
 			</div> <!-- /.content-wrapper -->
 
 			<footer class="main-footer">
@@ -71,6 +87,8 @@
 			</footer>
 		</div> <!-- ./wrapper -->
 		
+		 <!-- Google API -->
+		<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 	    <!-- jQuery 2.1.4 -->
 		<script src="jQuery-2.1.4.min.js"></script>
 		<!-- App -->

@@ -127,4 +127,20 @@ public class LetsFindTime
 	{
 		return this.userExisted;
 	}
+	
+	public boolean eventUpdate(int userID, String event)
+	{
+		try
+		{
+			this.statement = this.connection.prepareStatement("UPDATE users SET event=? WHERE userID=?");
+			this.statement.setString(1, event);
+			this.statement.setInt(2, userID);
+			this.statement.executeUpdate();
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+	}
 }
